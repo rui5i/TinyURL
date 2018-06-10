@@ -1,0 +1,19 @@
+{
+  "name": "tinyurl",
+  "version": "1.0.0",
+  "description": "A project using React, Node.js, Express, DynamoDB to deliver URL shortening service.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rui5i/TinyURL.git"
+  },
+  "author": "Rui Fang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rui5i/TinyURL/issues"
+  },
+  "homepage": "https://github.com/rui5i/TinyURL#readme"
+}
