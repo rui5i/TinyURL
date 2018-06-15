@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/rui5i/TinyURL/issues"
   },
-  "homepage": "https://github.com/rui5i/TinyURL#readme"
+  "homepage": "https://github.com/rui5i/TinyURL#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
