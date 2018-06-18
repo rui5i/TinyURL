@@ -1,9 +1,23 @@
 const express = require('express');
+const indexRouter = require('./routes/index');
+const restRouter = require('./routes/rest');
+const redirectRouter = require('./routes/redirect');
+
 
 const app = express();
 
-app.get('/', (req, res, next) => res.send('Hello World!'));
+/**
+ * Router definition
+ */
+app.use('/', indexRouter);
 
+app.use('/api/v1', restRouter);
+
+app.use('/:shortUrl', redirectRouter);
+
+/**
+ * Server launching config
+ */
 app.set('port', process.env.PORT || 3000);
 
 app.listen(app.get('port'), () => {
