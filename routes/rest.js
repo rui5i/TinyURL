@@ -1,14 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const bodyParser = require('body-parser');
-const jsonParser = bodyParser.json();
 const urlService = require('../services/urlService');
 const eventHandlerWrapper = require('./eventHandlerWrapper');
 
 /**
  * New url mapping event handler When user posts longUrl
  */
-router.post('/urls', jsonParser, eventHandlerWrapper(async (req, res, next) => {
+router.post('/urls', eventHandlerWrapper(async (req, res, next) => {
     const longUrl = req.body.longUrl;
     const urlMapping = await urlService.getShortUrl(longUrl);
     res.json(urlMapping);
